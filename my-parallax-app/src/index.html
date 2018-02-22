@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>MySassyApp</title>
+  <title>parallax </title>
   <base href="/">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,25 +18,34 @@
 </body>
 <script>
   window.sr = ScrollReveal();
+  sr.reveal('.company-intro__content',{
+    duration: 2000,
+    delay: 1000,
+    origin: 'bottom'
+  })
   sr.reveal('.js-grid-item',{
     duration: 2000,
     delay: 1000,
     origin: 'bottom'
   })
-  sr.reveal('.work-item-container',{
-    duration: 4000,
+  sr.reveal('.work-item__img',{
+    duration: 2000,
     origin: 'bottom',
     distance: '300px'
   })
-  
+  sr.reveal('.work-item__info',{
+     duration: 3000,
+    origin: 'bottom',
+    distance: '300px'
+  })
   sr.reveal('.site-nav',{
     duration: 2000,
     delay: 2000,
     origin: 'top'
   })
   sr.reveal('.pra-desc',{
-    duration: 2000,
-    delay: 2000,
+    duration: 1000,
+    delay: 1000,
     origin: 'bottom'
   });
   sr.reveal('.shapes__title', {

@@ -49,7 +49,7 @@ p {
 }
 
 #showcase .showcase-right {
-    margin-top: 90px;
+    margin-top: 215px;
 }
 
 #testimonial {
@@ -85,7 +85,37 @@ footer {
 }
 
 .body--home {
-    background: #3e3750;
+    background-image: url("https://parall.ax/parallax-2016/img/hero-building-1a08082abe.jpg");
+    -webkit-animation-name: backimage;
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s;
+    /* Safari 4.0 - 8.0 */
+    animation-name: backimage;
+    animation-duration: 4s;
+}
+
+
+/* Safari 4.0 - 8.0 */
+
+@-webkit-keyframes backimage {
+    from {
+        background: #3e3750;
+    }
+    to {
+        background-image: url("https://parall.ax/parallax-2016/img/hero-building-1a08082abe.jpg");
+    }
+}
+
+
+/* Standard syntax */
+
+@keyframes backimage {
+    from {
+        background: #3e3750;
+    }
+    to {
+        background-image: url("https://parall.ax/parallax-2016/img/hero-building-1a08082abe.jpg");
+    }
 }
 
 .shapes__subtitle {

@@ -14,8 +14,6 @@
     color: #fff;
 }
 
-
-
 @media (min-width: 950px) {
     .site-nav.-out-h {
         animation: navFadeOut .4s forwards
@@ -146,3 +144,34 @@
 }
 
 // Section 1 style
+.shapes__image {
+    background-position: left bottom;
+    background-image: url("https://parall.ax/parallax-2016/img/hero-building-1a08082abe.jpg");
+    transform: translate3d(9.575px, -9px, 0px) scale(1.05);
+}
+
+.shapes {
+    min-height: 100vh;
+    position: fixed;
+    z-index: -4;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    transition: opacity .6s
+}
+
+.shapes__image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+    background-size: cover;
+    background-position: center center;
+    opacity: 1;
+    transition: opacity 1s 3.2s
+}
