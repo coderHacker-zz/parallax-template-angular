@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>MySassyApp</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700%7CRoboto%7CJosefin+Sans:100,300,400,500"
+    rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+  
+</head>
+<body>
+  <app-root></app-root>
+</body>
+<script>
+  window.sr = ScrollReveal();
+  sr.reveal('.js-grid-item',{
+    duration: 2000,
+    delay: 1000,
+    origin: 'bottom'
+  })
+  sr.reveal('.work-item-container',{
+    duration: 4000,
+    origin: 'bottom',
+    distance: '300px'
+  })
+  
+  sr.reveal('.site-nav',{
+    duration: 2000,
+    delay: 2000,
+    origin: 'top'
+  })
+  sr.reveal('.pra-desc',{
+    duration: 2000,
+    delay: 2000,
+    origin: 'bottom'
+  });
+  sr.reveal('.shapes__title', {
+    duration: 1500,
+    origin: 'bottom',
+    distance: '300px'
+  });
+  
+</script>
+
+<script>
+  $(function () {
+    // Smooth Scrolling
+    var prev = 0;
+    var $window = $(window);
+    var nav = $('.site-nav');
+    $('a[href*="#"]:not([href="#"])').click(function () {
+      if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+        if (target.length) {
+          $('html, body').animate({
+            scrollTop: target.offset().top
+          }, 1000);
+          return false;
+        }
+      }
+    });
+    $window.on('scroll', function () {
+      var scrollTop = $window.scrollTop();
+      nav.toggleClass('hidden', scrollTop > prev);
+      prev = scrollTop;
+    });
+  });
+</script>
+</html>
