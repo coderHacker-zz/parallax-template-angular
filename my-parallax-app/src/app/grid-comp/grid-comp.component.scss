@@ -125,12 +125,12 @@
 }
 
 .grid-item--white .grid__content::before {
-    background: #fff
+    background: #f5f5f5;
 }
 
 .body--shapes .grid-item--white .grid__content::before,
 .body--white .grid-item--white .grid__content::before {
-    background: #f5f5f5
+    background: #f5f5f5;
 }
 
 .body--dark .grid-item--white .grid__content::before,
@@ -143,6 +143,11 @@
 
 .grid-item--nimbus .grid__content::before {
     background: #333
+}
+
+.grid-item--primary-1 {
+    position: relative;
+    bottom: 374px;
 }
 
 .grid-item--primary .grid__content::before {
@@ -342,20 +347,27 @@
     }
 }
 
+.js-grid-body-1 {
+    color: black;
+    .grid__heading {
+        font-size: 3.55556rem;
+    }
+}
+
 .grid__heading {
     font-size: 1.55556rem;
-    text-transform: capitalize
+    text-transform: capitalize;
 }
 
 @media (max-width: 1399px) {
     .grid__heading {
-        font-size: 1.55556rem
+        font-size: 1.55556rem;
     }
 }
 
 @media (max-width: 1320px) {
     .grid__heading {
-        font-size: 1.44444rem
+        font-size: 1.44444rem;
     }
 }
 
@@ -404,7 +416,7 @@
 
 @media (max-width: 1520px) {
     .grid__network {
-        font-size: .77778rem
+        font-size: 1.5555rem;
     }
 }
 
