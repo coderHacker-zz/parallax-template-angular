@@ -19,7 +19,7 @@
 <script>
   window.sr = ScrollReveal();
   sr.reveal('.company-intro__content',{
-    duration: 2000,
+    duration: 1000,
     delay: 1000,
     origin: 'bottom'
   })
@@ -34,7 +34,7 @@
     distance: '300px'
   })
   sr.reveal('.work-item__info',{
-     duration: 3000,
+     duration: 2000,
     origin: 'bottom',
     distance: '300px'
   })
@@ -61,7 +61,7 @@
     // Smooth Scrolling
     var prev = 0;
     var $window = $(window);
-    var nav = $('.site-nav');
+    var $nav = $('.site-nav');
     $('a[href*="#"]:not([href="#"])').click(function () {
       if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
         var target = $(this.hash);
@@ -75,9 +75,12 @@
       }
     });
     $window.on('scroll', function () {
-      var scrollTop = $window.scrollTop();
-      nav.toggleClass('hidden', scrollTop > prev);
-      prev = scrollTop;
+      var y = $(this).scrollTop();
+      if (y > 10) {
+        $nav.fadeOut();
+      } else {
+        $nav.fadeIn();
+      }
     });
   });
 </script>

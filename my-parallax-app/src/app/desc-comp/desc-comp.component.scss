@@ -72,3 +72,12 @@
     }
 }
 
+@media only screen and (max-width: 768px) {
+    .flip-btn--grey {
+        span {
+            font-size: 13px;
+            margin-left: 27px;
+            margin-bottom: 8px;
+        }
+    }
+}

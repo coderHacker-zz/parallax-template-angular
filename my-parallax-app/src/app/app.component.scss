@@ -175,3 +175,58 @@
     opacity: 1;
     transition: opacity 1s 3.2s
 }
+
+// Responsive nav bar
+.nav-toggle {
+    display: block;
+    width: 32px;
+    height: 20px;
+    position: absolute;
+    z-index: 1;
+    top: 30px;
+    right: 30px
+}
+
+.nav-toggle::after,
+.nav-toggle::before {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    height: 2px;
+    background: #fff;
+    -ms-transform-origin: right;
+    transform-origin: right
+}
+
+.nav-toggle::before {
+    width: 25px;
+    top: 0
+}
+
+.nav-toggle::after {
+    width: 20px;
+    bottom: 0
+}
+
+@media (min-width: 950px) {
+    .nav-toggle {
+        display: none
+    }
+}
+
+.nav-toggle span:not(.sr-only) {
+    display: block;
+    position: absolute;
+    top: 9px;
+    right: 0;
+    width: 32px;
+    height: 2px;
+    background: #fff
+}
+
+@media only screen and (max-width: 768px) {
+    .site-nav__list{
+        display: none;
+    }
+}

@@ -35,8 +35,6 @@
     color: inherit
 }
 
-
-
 .work-item__img {
     display: block;
     background: 0 0;
@@ -139,4 +137,17 @@
 .flip-btn::before {
     top: 75%;
     left: 60px;
+}
+
+@media only screen and (max-width: 768px) {
+    .flip-btn--white {
+        span {
+            font-size: 13px;
+            margin-left: 27px;
+            margin-bottom: 26px;
+        }
+    }
+    .flip-btn::before {
+        left: 18px;
+    }
 }
